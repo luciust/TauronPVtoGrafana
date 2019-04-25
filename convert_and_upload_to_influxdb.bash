@@ -11,7 +11,11 @@ IDB_URL="'http://grafana.local:8086/write?db=domoticz'"
 #
 # Koniec Twoich definicji
 #
+cd ~/TauronPVtoGrafana
+#Convert the downloaded meter data from XLS to comma separated values for further processing
+./xls2csv/xls2csv.py ~/Downloads/Dane.xls raw_tauron_data.txt
 mkdir -p work_dir
+mv raw_tauron_data.txt work_dir
 cd work_dir
 #Najpierw grep po dacie aby odsciac smieci, potem sed zamienia " 1" na znak końca linii i 1 aby przeniesc do następnej linii pierwszy odczyt.
 #Następnie tr kasuje cudzysłowy, a cslip po roku robi osobne pliki
