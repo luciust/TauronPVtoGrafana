@@ -8,8 +8,12 @@ import time
 
 #First run
 time.sleep(4)
+#Target and close the "Zamknij" button that sometimes shows up
+pyautogui.moveTo(920, 425, duration=0.25)
+pyautogui.click()
+time.sleep(5)
 #Target the "Logowanie" button and click, wait
-pyautogui.moveTo(900, 660, duration=0.25)
+pyautogui.moveTo(900, 675, duration=0.25)
 pyautogui.click()
 time.sleep(20)
 #Very precise targeting of the "Energia oddana do sieci" checkbox, click and wait

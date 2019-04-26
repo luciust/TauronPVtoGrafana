@@ -29,8 +29,6 @@ sleep 5
 sleep 25
 #Run the python script that clicks on the Taurons interface and Downloads the data, then quits the Firefox
 ./tauron-cli-browser-job.py3
-#Convert the downloaded meter data from XLS to comma separated values for further processing
-./xls2csv/xls2csv.py ~/Downloads/Dane.xls raw_tauron_data.txt
 #Kill all remaining programs
 killall x11vnc
 killall fluxbox
