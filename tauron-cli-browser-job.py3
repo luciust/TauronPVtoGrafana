@@ -11,23 +11,23 @@ time.sleep(4)
 #Target the "Logowanie" button and click, wait
 pyautogui.moveTo(900, 660, duration=0.25)
 pyautogui.click()
-time.sleep(12)
+time.sleep(20)
 #Very precise targeting of the "Energia oddana do sieci" checkbox, click and wait
 pyautogui.moveTo(35, 725, duration=0.25)
 pyautogui.click()
-time.sleep(6)
+time.sleep(30)
 #Target and click "Pobierz" button
 pyautogui.moveTo(935, 530, duration=0.25)
 pyautogui.click()
-time.sleep(3)
+time.sleep(5)
 #Target and confirm the "Zakres"
 pyautogui.moveTo(620, 490, duration=0.25)
 pyautogui.click()
-time.sleep(7)
+time.sleep(8)
 #Target and click Firefox Save button
-pyautogui.moveTo(650, 510, duration=0.25)
+pyautogui.moveTo(680, 490, duration=0.25)
 pyautogui.click()
-time.sleep(4)
+time.sleep(6)
 #Exit firefox
 pyautogui.hotkey('ctrl', 'q')
 
