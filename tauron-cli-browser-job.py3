@@ -6,16 +6,22 @@
 import pyautogui
 import time
 
-#First run
+#First run - wait for FF
 time.sleep(4)
-#Target and close the "Zamknij" button that sometimes shows up
-pyautogui.moveTo(920, 425, duration=0.25)
+time.sleep(2)
+pyautogui.hotkey('enter')
+time.sleep(1)
+pyautogui.hotkey('enter')
+#Target the login fileld and click
+pyautogui.moveTo(150, 678, duration=0.25)
+time.sleep(1)
 pyautogui.click()
-time.sleep(5)
-#Target the "Logowanie" button and click, wait
-pyautogui.moveTo(900, 675, duration=0.25)
-pyautogui.click()
-time.sleep(20)
+#Optional - press login to activate 
+time.sleep(2)
+pyautogui.hotkey('enter')
+time.sleep(1)
+pyautogui.hotkey('enter')
+time.sleep(15)
 #Very precise targeting of the "Energia oddana do sieci" checkbox, click and wait
 pyautogui.moveTo(35, 725, duration=0.25)
 pyautogui.click()

@@ -6,9 +6,9 @@
 cd ~/TauronPVtoGrafana
 mkdir -p working_dir
 #Kill any leftovers from previous session
-killall Xvfb
-killall fluxbox
-killall x11vnc
+killall -9 Xvfb
+killall -9 fluxbox
+killall -9 x11vnc
 killall firefox
 #Remove old data
 rm ~/Downloads/Dane.xls
@@ -22,7 +22,7 @@ sleep 10
 /usr/bin/fluxbox -display :1 &
 sleep 5
 #ONLY FOR DEBUGGING - Start a debugging VNC access to the X session - only needed in case of problems with data aquisition 
-x11vnc -display :1 -bg -listen raspberrypi.local -xkb
+x11vnc -display :1 -bg -listen atomicpi.local -xkb
 #start Firefox in full screen, enter the meter's URL
 /usr/bin/firefox -url https://elicznik.tauron-dystrybucja.pl/ -fullscreen &
 

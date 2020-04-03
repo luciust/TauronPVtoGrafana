@@ -3,15 +3,15 @@
 # GPL 3.0
 # This is a little monster - quick and lousy hack to get data form Tauron's e-meter WWW in XLS and push it to InfluxdB
 #
-cd ~/TauronPVtoGrafana
-mkdir -p working_dir
+#cd ~/TauronPVtoGrafana
+#mkdir -p working_dir
 #Kill any leftovers from previous session
 killall Xvfb
 killall fluxbox
 killall x11vnc
 killall firefox
 #Remove old data
-rm ~/Downloads/Dane.xls
+#rm -f ~/Downloads/dane.csv
 #Set the DISPLAY variable and 
 export DISPLAY=:1
 #Run X session
@@ -34,3 +34,4 @@ killall x11vnc
 killall fluxbox
 killall Xvfb
 ./convert_and_upload_to_influxdb.bash
+              
