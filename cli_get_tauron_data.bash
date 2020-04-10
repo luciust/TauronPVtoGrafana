@@ -11,7 +11,7 @@ killall -9 fluxbox
 killall -9 x11vnc
 killall firefox
 #Remove old data
-rm ~/Downloads/Dane.xls
+rm ~/Downloads/dane.csv
 #Set the DISPLAY variable and
 export DISPLAY=:1
 #Run X session
